@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Movie from './components/Movie/Movie';
+import MovieList from './components/MovieList/MovieList';
 
 
 class App extends Component {
@@ -21,9 +21,7 @@ class App extends Component {
   ]
   }
   render() {
-    let movies = this.state.movieList.map(function(movie) {
-      return <Movie key={movie.id} title={movie.title} overview={movie.overview} path={movie.posterPath} />
-    })
+    let movies = <MovieList movies={this.state.movieList} />
 
     return (
       <div className="App">
