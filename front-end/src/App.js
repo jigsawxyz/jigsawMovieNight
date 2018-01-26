@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Movie from './components/Movie/Movie';
+
 
 class App extends Component {
   state = {
-    movielist: [
+    movieList: [
       {
         id: '1',
         title: 'Some-title',
@@ -22,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <h2> Hi </h2>
+      <Movie title='ti' overview='cool' path='/path' />
       </div>
     );
   }
