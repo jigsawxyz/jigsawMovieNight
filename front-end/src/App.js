@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Movie from './components/Movie/Movie';
 
@@ -22,9 +21,13 @@ class App extends Component {
   ]
   }
   render() {
+    let movies = this.state.movieList.map(function(movie) {
+      return <Movie key={movie.id} title={movie.title} overview={movie.overview} path={movie.posterPath} />
+    })
+
     return (
       <div className="App">
-      <Movie title='ti' overview='cool' path='/path' />
+        {movies}
       </div>
     );
   }
