@@ -24,6 +24,8 @@ describe('movie', () => {
   })
 
   it('have a path', () => {
-    expect(wrapper2.find('p').at(2).text()).toEqual(props.path)
+    // expect(wrapper2.find('img').at(0).text()).toEqual(props.path)
+    console.log(wrapper2.find('img').at(0));
+    expect(wrapper2.find('img'));
   })
 })
